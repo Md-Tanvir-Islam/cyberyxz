@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logged Out - Cyber Tool</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    .neumorphic {
+      box-shadow: 12px 12px 24px #1a1a1a, -12px -12px 24px #2e2e2e;
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+                  inset -3px -3px 7px rgba(255, 255, 255, 0.15),
+                  inset 3px 3px 5px rgba(0, 0, 0, 0.25);
+    }
+    .animated-text {
+      background: linear-gradient(to right, #00f260, #0575e6);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textAnimate 5s linear infinite;
+    }
+    @keyframes textAnimate {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-white">
+
+  <div class="glass p-10 w-full max-w-md text-center">
+    <h2 class="text-4xl font-bold animated-text mb-4">You have been logged out</h2>
+    <p class="mb-6 text-white/80">Thanks for using <strong>Cyber Tool</strong>. You can log in again anytime.</p>
+    <a href="login.html" class="inline-block px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-xl shadow-lg font-semibold hover:from-green-500 hover:to-blue-600 transition-all duration-300">
+      🔐 Back to Login
+    </a>
+    <p class="text-sm text-gray-300 mt-8">© 2025 Cyber Tool</p>
+  </div>
+
+</body>
+</html>

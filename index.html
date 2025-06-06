@@ -1,0 +1,250 @@
+
+<script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Tool</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    .neumorphic {
+      box-shadow: 12px 12px 24px #1a1a1a, -12px -12px 24px #2e2e2e;
+      border-radius: 20px;
+    }
+    .sidebar-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    .whatsapp-float:hover {
+      background: #1ebe57;
+    }
+    .rainbow-border {
+      padding: 8px;
+      border-radius: 9999px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff, #32cd32);
+      background-size: 300% 300%;
+      animation: borderMove 5s linear infinite;
+    }
+    @keyframes borderMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+    .animated-text {
+      background: linear-gradient(to right, #ff416c, #ff4b2b, #1e90ff, #32cd32);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShine 4s linear infinite;
+    }
+    @keyframes textShine {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+      z-index: 30;
+      display: none;
+    }
+    .sidebar-open .sidebar-overlay {
+      display: block;
+    }
+  </style>
+</head>
+<body class="text-white font-sans relative" id="mainBody">  <!-- Sidebar Toggle Button --><button onclick="toggleSidebar()" class="m-4 p-2 bg-white/20 rounded-lg">☰ Menu</button>
+
+  <!-- Sidebar Overlay -->  <div class="sidebar-overlay" onclick="toggleSidebar()"></div>  <!-- Sidebar -->  <div id="sidebar" class="fixed top-0 left-0 w-72 h-full glass neumorphic flex-col p-5 transform -translate-x-full transition-transform duration-300 z-40">
+    <h1 class="text-3xl font-bold text-center bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text">Developed By Wassi Khan Cyber Tool</h1>
+      <div class="mt-8 space-y-2">
+        <a href="https://wa.me/+923038264337" target="_blank" class="flex items-center gap-2 sidebar-btn py-2 px-4 rounded-lg"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a>
+        <a href="https://yt link com" target="_blank" class="flex items-center gap-2 sidebar-btn py-2 px-4 rounded-lg"><i class="ph ph-youtube-logo"></i> YouTube</a>
+        <a href="https://fb link com" target="_blank" class="flex items-center gap-2 sidebar-btn py-2 px-4 rounded-lg"><i class="ph ph-facebook-logo"></i> Facebook</a>
+        <a href="https://tiktok kka link.com" target="_blank" class="flex items-center gap-2 sidebar-btn py-2 px-4 rounded-lg"><i class="ph ph-tiktok-logo"></i> TikTok</a>
+        <a href="https:/github link lgao ammarcom" target="_blank" class="flex items-center gap-2 sidebar-btn py-2 px-4 rounded-lg"><i class="ph ph-github-logo"></i> GitHub</a>
+         <nav class="mt-10 space-y-4">
+      <a href="logout.html" class="flex items-center gap-2 hover:bg-red-600 py-2 px-4 rounded-lg mt-6">Logout</a>
+      </div>
+    </nav>
+  </div>  <!-- Main Content -->  <main class="p-6 mt-6">
+    <!-- Top Tool Banner -->
+    <div class="w-full flex flex-col items-center mb-8">
+      <div class="rainbow-border">
+        <img src="developer img lggao ammar" alt="Tool Banner" class="w-56 h-56 object-cover rounded-full shadow-lg" />
+      </div>
+      <h2 class="mt-4 text-2xl font-bold animated-text">Developer: Wassi Khan</h2>
+    </div><!-- Tool Cards -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Tool Card 1 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-green-300">Unlimited Bomber</h2>
+    <img src="https://i.ibb.co/khKhkVq/unlimited.png" alt="Unlimited Bomber" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="unlimited.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 2 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-yellow-300">Nagad Screenshot</h2>
+    <img src="https://i.ibb.co/TvXnrMh/nagad.png" alt="Nagad Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="nagad.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 3 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-pink-300">Bkash Screenshot</h2>
+    <img src="https://i.ibb.co/GWp9kVJ/bkash.png" alt="Bkash Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="bkash.html" class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+  
+  <!-- Tool Card 1 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-green-300">Unlimited Bomber</h2>
+    <img src="https://i.ibb.co/khKhkVq/unlimited.png" alt="Unlimited Bomber" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="unlimited.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 2 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-yellow-300">Nagad Screenshot</h2>
+    <img src="https://i.ibb.co/TvXnrMh/nagad.png" alt="Nagad Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="nagad.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 3 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-pink-300">Bkash Screenshot</h2>
+    <img src="https://i.ibb.co/GWp9kVJ/bkash.png" alt="Bkash Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="bkash.html" class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+  
+  <!-- Tool Card 1 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-green-300">Unlimited Bomber</h2>
+    <img src="https://i.ibb.co/khKhkVq/unlimited.png" alt="Unlimited Bomber" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="unlimited.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 2 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-yellow-300">Nagad Screenshot</h2>
+    <img src="https://i.ibb.co/TvXnrMh/nagad.png" alt="Nagad Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="nagad.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 3 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-pink-300">Bkash Screenshot</h2>
+    <img src="https://i.ibb.co/GWp9kVJ/bkash.png" alt="Bkash Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="bkash.html" class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+  
+  <!-- Tool Card 1 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-green-300">Unlimited Bomber</h2>
+    <img src="https://i.ibb.co/khKhkVq/unlimited.png" alt="Unlimited Bomber" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="unlimited.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 2 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-yellow-300">Nagad Screenshot</h2>
+    <img src="https://i.ibb.co/TvXnrMh/nagad.png" alt="Nagad Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="nagad.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 3 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-pink-300">Bkash Screenshot</h2>
+    <img src="https://i.ibb.co/GWp9kVJ/bkash.png" alt="Bkash Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="bkash.html" class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+  
+  <!-- Tool Card 1 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-green-300">Unlimited Bomber</h2>
+    <img src="https://i.ibb.co/khKhkVq/unlimited.png" alt="Unlimited Bomber" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="unlimited.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 2 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-yellow-300">Nagad Screenshot</h2>
+    <img src="https://i.ibb.co/TvXnrMh/nagad.png" alt="Nagad Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="nagad.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 3 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-pink-300">Bkash Screenshot</h2>
+    <img src="https://i.ibb.co/GWp9kVJ/bkash.png" alt="Bkash Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="bkash.html" class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+  
+  <!-- Tool Card 1 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-green-300">Unlimited Bomber</h2>
+    <img src="https://i.ibb.co/khKhkVq/unlimited.png" alt="Unlimited Bomber" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="unlimited.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 2 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-yellow-300">Nagad Screenshot</h2>
+    <img src="https://i.ibb.co/TvXnrMh/nagad.png" alt="Nagad Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="nagad.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+
+  <!-- Tool Card 3 -->
+  <div class="glass neumorphic p-5 rounded-2xl text-center">
+    <h2 class="text-2xl font-bold mb-4 text-pink-300">Bkash Screenshot</h2>
+    <img src="https://i.ibb.co/GWp9kVJ/bkash.png" alt="Bkash Tool" class="mx-auto mb-3 w-36 h-36 rounded-xl shadow-lg object-cover" />
+    <a href="bkash.html" class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 mt-2 rounded-lg">Use Tool</a>
+  </div>
+</div>
+
+  </main>  <!-- WhatsApp Button -->  <a href="https://wa.me/+923038264337" target="_blank" class="whatsapp-float">
+    <i class="ph ph-whatsapp-logo text-2xl"></i>
+  </a>  <!-- Footer -->  <footer class="text-center text-sm text-gray-400 p-4 mt-10">
+    © 2025 Cyber Tool. All rights reserved.Developed By Wassi Khan
+  </footer>  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const body = document.getElementById('mainBody');
+      sidebar.classList.toggle('-translate-x-full');
+      body.classList.toggle('sidebar-open');
+    }
+  </script></body>
+</html>
